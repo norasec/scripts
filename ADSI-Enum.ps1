@@ -43,7 +43,6 @@ function ADSI-Local
                 $line=$line.TrimEnd()
                 Write-Output "[+] Machine $line Group Memberships`n" >> $fileps1
                 $outs = ('Get-LocalGroupMembership -Group "{0}" | ft -autosize >> {1}' -f $line,$fileps1)
-                write-output [*] $outs
                 iex $outs
                 }
             }
