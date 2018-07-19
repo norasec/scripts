@@ -25,10 +25,10 @@ rule UsersPasswords: userspasswords
         $user45 = "administrador" nocase
 
         //users regexs, ej
-        $reu_corp_user1 = /[a-zA-Z]{2}[0-9]{5}/ nocase
-        $reu_corp_user2 = /U[0-9]{6}/ nocase
+        $reu_corp_user1 = /[a-zA-Z]{3}[0-9]{7}/ nocase
+        $reu_corp_user2 = /U[0-9]{9}/ nocase
 
-        $reu_1 = /user:?\s?[A-Za-z0-9]{8}/ nocase
+        $reu_1 = /user:?\s?[A-Za-z0-9]{10}/ nocase
 
         // PASSWORDS 8lenght
         // for .txt
