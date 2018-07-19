@@ -1,0 +1,55 @@
+rule UsersPasswords: userspasswords
+{
+    meta:
+        description = "Rule for finding shared users and passwords"
+        author = "Jonas RopCas @Norasec"
+
+    strings:
+        // USERS
+        $user1 = "admin" nocase
+        $user2 = "bin" nocase
+        $user3 = "daemon" nocase
+        $user4 = "dladm" nocase
+        $user5 = "gdm" nocase
+        $user6 = "guest" nocase
+        $user7 = "listen" nocase
+        $user8 = "lp" nocase
+        $user9 = "mysql" nocase
+        $user10 = "netadm" nocase
+
+        $user31 = "root" nocase
+        $user35 = "toor" nocase
+
+
+        $user44 = "administrator" nocase
+        $user45 = "administrador" nocase
+
+        //users regexs, ej
+        $reu_corp_user1 = /[a-zA-Z]{2}[0-9]{5}/ nocase
+        $reu_corp_user2 = /U[0-9]{6}/ nocase
+
+        $reu_1 = /user:?\s?[A-Za-z0-9]{8}/ nocase
+
+        // PASSWORDS 8lenght
+        // for .txt
+        $rep1 = /pass:?\s?\=?[A-Za-z0-9]{8}/ nocase
+        $rep2 = /password:?\s?\=?[A-Za-z0-9]{8}/ nocase
+        // for .ps1 invoke
+        $rep3 = /-pass\s?\$?[A-Za-z0-9]{8}/ nocase
+        $rep4 = /-password\s?\$?[A-Za-z0-9]{8}/ nocase
+        // for .cmd win invoke
+        $rep5 = /\/p\s+[A-Za-z0-9]{8}/ nocase
+        //.xcom .config
+        $rep6 = "<xcom_param2>" nocase
+        //other .cmds
+        $rep7 = /SET rootusr=.*\nSET rootpwd=[A-Za-z0-9]{8}/ nocase
+        //more cmd, -u -p
+        $rep8 = /-u [A-Za-z0-9]{8} -p [A-Za-z0-9]{8}/ nocase
+        // more...
+        // *sql -u user -p password...
+        // domain\user pass
+        
+
+    condition:
+        (any of ($reu*) or any of ($user*)) and any of ($rep*)
+}
