@@ -2,7 +2,7 @@
 some pentest scripts
 
 ## tools
-setup kali tools
+setup kali with tools and resources for offensive tasks
 
 #### pwn_escalate_enums.sh
 Create a directory containing main scripts and tools used for find exploits to gain access or escalate privileges and local enumeration for Windows and Linux
@@ -15,6 +15,8 @@ Create a directory containing main tools for payload generation and av-bypass
 
 #### powershell_all.sh
 Create a directory for installing powershell, download main post-exploitation frameworks and powershell_less
+
+##
 
 #### ADSI-Enum.ps1
 Some useful functions to enumerato AD using powershell native features
