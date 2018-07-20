@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shellcode and payload generators
+# powershell_all
 ####################################
 # Folder Structure
 ####################################
@@ -49,17 +49,27 @@ git clone https://github.com/Mr-Un1k0d3r/PowerLessShell
 # A JavaScript and VBScript Based Empire Launcher
 git clone https://github.com/Cn33liz/StarFighters
 
-# InsecurePowerShell - PowerShell without System.Management.Automation.dll
-git clone https://github.com/cobbr/InsecurePowerShell
+# InsecurePowerShell - PowerShell.exe without System.Management.Automation.dll
+# https://github.com/cobbr/InsecurePowerShell
+mkdir InsecurePowerShell
+cd InsecurePowerShell
+curl -O https://github.com/cobbr/InsecurePowerShell/releases/download/InsecurePowerShell-v6.0.0-rc.2/InsecurePowerShell-v6.0.0-rc.2-win-x64.zip
+unzip InsecurePowerShell-v6.0.0-rc.2-win-x64.zip
+cd ..
 
 #Powershell Host running within cscript.exe
 git clone https://github.com/Cn33liz/CScriptShell
 
 # PowerShell Runspace .NET Post Exploitation Toolkit in c#
+# need to be compiled with Microsoft Visual Studio
 git clone https://github.com/Cn33liz/p0wnedShell
 
 # Execute a .net dll method from the command line
-git clone https://github.com/0xbadjuju/rundotnetdll32
+# https://github.com/0xbadjuju/rundotnetdll32
+mkdir rundotnetdll32
+cd rundotnetdll32
+curl -O https://github.com/0xbadjuju/rundotnetdll32/releases/download/1.0.0/rundotnetdll32.exe
+cd ..
 
 # missing: https://gist.github.com/subTee/47e9d64d0a08c7256ecc8cbed8034c20
 
@@ -77,7 +87,12 @@ git clone https://github.com/EmpireProject/Empire
 cd Empire
 sudo ./setup/install.sh
 cd ..
+
+# empyre
 git clone https://github.com/EmpireProject/EmPyre
+
+# empire-web
+sudo apt-get install php7.0-curl php5-curl
 git clone https://github.com/interference-security/empire-web
 
 # powersploit
