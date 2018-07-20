@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shellcode and payload generators
+# payload generators and bypass av
 ####################################
 # Folder Structure
 ####################################
