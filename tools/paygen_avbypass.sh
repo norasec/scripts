@@ -70,11 +70,11 @@ git clone https://github.com/Mr-Un1k0d3r/UniByAv
 cd ..
 
 ####################################
-# Others
+# others
 ####################################
 
-mkdir Others
-cd Others
+mkdir others
+cd others
 # A JavaScript and VBScript shellcode launcher.
 git clone https://github.com/mdsecactivebreach/CACTUSTORCH
 git clone https://github.com/Arno0x/ObfuscateCactusTorch
