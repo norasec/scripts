@@ -34,7 +34,38 @@ apt -y install powershell
 # pwsh
 
 ####################################
-# powershell less
+# powershell_frameworks
+####################################
+
+mkdir powershell_frameworks
+cd powershell_frameworks
+
+# empire
+git clone https://github.com/EmpireProject/Empire
+cd Empire
+sudo ./setup/install.sh
+cd ..
+
+# empyre
+git clone https://github.com/EmpireProject/EmPyre
+
+# empire-web
+sudo apt-get install php7.0-curl php5-curl
+git clone https://github.com/interference-security/empire-web
+
+# powersploit
+git clone https://github.com/PowerShellMafia/PowerSploit
+
+# nishang
+git clone https://github.com/samratashok/nishang
+
+# PSattack, mix of frameworks
+git clone https://github.com/jaredhaight/PSAttack
+
+cd ..
+
+####################################
+# powershell_less
 ####################################
 
 mkdir powershell_less
@@ -72,37 +103,6 @@ curl -O https://github.com/0xbadjuju/rundotnetdll32/releases/download/1.0.0/rund
 cd ..
 
 # missing: https://gist.github.com/subTee/47e9d64d0a08c7256ecc8cbed8034c20
-
-cd ..
-
-####################################
-# powershell_frameworks
-####################################
-
-mkdir powershell_frameworks
-cd powershell_frameworks
-
-# empire
-git clone https://github.com/EmpireProject/Empire
-cd Empire
-sudo ./setup/install.sh
-cd ..
-
-# empyre
-git clone https://github.com/EmpireProject/EmPyre
-
-# empire-web
-sudo apt-get install php7.0-curl php5-curl
-git clone https://github.com/interference-security/empire-web
-
-# powersploit
-git clone https://github.com/PowerShellMafia/PowerSploit
-
-# nishang
-git clone https://github.com/samratashok/nishang
-
-# PSattack, mix of frameworks
-git clone https://github.com/jaredhaight/PSAttack
 
 cd ..
 
