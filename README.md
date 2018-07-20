@@ -5,16 +5,16 @@ some pentest scripts
 setup kali with tools and resources for offensive tasks
 
 #### pwn_escalate_enums.sh
-Create a directory containing main scripts and tools used for find exploits to gain access or escalate privileges and local enumeration for Windows and Linux
+Download main scripts and tools used for find exploits to gain access or escalate privileges and local enumeration for Windows and Linux
 
 #### exploit_repos.sh
-Create a directory containing main exploits for windows, linux and unix
+Download main exploits for windows, linux and unix
 
 #### paygen_avbypass.sh
-Create a directory containing main tools for payload generation and av-bypass
+Download main tools for payload generation and av-bypass
 
 #### powershell_all.sh
-Create a directory for installing powershell, download main post-exploitation frameworks and powershell_less
+Install powershell in kali, download main powershell frameworks and powershell_less
 
 ##
 
