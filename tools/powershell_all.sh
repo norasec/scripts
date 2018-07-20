@@ -74,6 +74,9 @@ cd powershell_frameworks
 
 # empire
 git clone https://github.com/EmpireProject/Empire
+cd Empire
+sudo ./setup/install.sh
+cd ..
 git clone https://github.com/EmpireProject/EmPyre
 git clone https://github.com/interference-security/empire-web
 
