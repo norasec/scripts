@@ -395,8 +395,8 @@ Set-Alias Invoke-ADSI-Searcher ADSI-Searcher
 
 # Usage
 ############################################################
-# $domain = "micasa.miedificio.com"
-# $adsi_obj = Domain_to_LDAP_FQDN $domain
+# $domain = "micasa.miedificio.com" # current domain wmic computersystem get domain
+# $adsi_obj = Domain-to-LDAP-FQDN $domain
 
 # Get-ADSI-Local full
 # Get-ADSI-Enum-AD $adsi_obj
