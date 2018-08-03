@@ -392,3 +392,13 @@ Set-Alias Get-ADSI-Local ADSI-Local
 Set-Alias Get-ADSI-Enum-AD ADSI-Enum-AD
 Set-Alias Get-ADSI-Enum-AD-Forest-Domain ADSI-Enum-AD-Forest-Domains
 Set-Alias Invoke-ADSI-Searcher ADSI-Searcher
+
+# Usage
+############################################################
+# $domain = "micasa.miedificio.com"
+# $adsi_obj = Domain_to_LDAP_FQDN $domain
+
+# Get-ADSI-Local full
+# Get-ADSI-Enum-AD $adsi_obj
+# Get-ADSI-Enum-AD-Forest-Domain $domain full
+# Invoke-ADSI-Searcher $adsi_obj
