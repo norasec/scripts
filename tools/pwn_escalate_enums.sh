@@ -26,10 +26,10 @@
 # up/exploit finders/gain access
 ####################################
 
-mkdir 'exploit finders'
-cd 'exploit finders'
-mkdir 'gain access'
-cd 'gain access'
+mkdir exploit_finders
+cd exploit_finders
+mkdir gain_access
+cd gain _ccess
 
 git clone https://github.com/1N3/Findsploit
 git clone https://github.com/vulnersCom/getsploit
@@ -43,15 +43,15 @@ cd ../
 # up/exploit finders/priv esc
 ####################################
 
-mkdir 'priv esc'
-cd 'priv esc'
+mkdir priv_esc
+cd priv_esc
 
 ####################################
 # up/exploit finders/priv esc/linux
 ####################################
 
-mkdir 'linux'
-cd 'linux'
+mkdir linux
+cd linux
 
 git clone https://github.com/belane/linux-soft-exploit-suggester
 git clone https://github.com/spencerdodd/kernelpop/
@@ -64,8 +64,8 @@ cd ../
 # up/exploit finders/priv esc/win
 ####################################
 
-mkdir 'win'
-cd 'win'
+mkdir win
+cd win
 
 git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester
 git clone https://github.com/rasta-mouse/Sherlock
@@ -76,15 +76,15 @@ cd ../../
 # up/local enum
 ####################################
 
-mkdir 'local enum'
-cd 'local enum'
+mkdir local_enum
+cd local_enum
 
 ####################################
 # up/priv esc/linux
 ####################################
 
-mkdir 'linux'
-cd 'linux'
+mkdir linux
+cd linux
 
 git clone https://github.com/Arr0way/linux-local-enumeration-script/
 git clone https://github.com/rebootuser/LinEnum
@@ -99,15 +99,15 @@ cd ../
 # up/priv esc/win
 ####################################
 
-mkdir 'win'
-cd 'win'
+mkdir win
+cd win
 
 git clone https://github.com/A-mIn3/WINspect
 git clone https://github.com/411Hall/JAWS
 git clone https://github.com/AlessandroZ/BeRoot
 git clone https://github.com/SpiderLabs/portia
-mkdir 'windows-privesc-check'
-cd 'windows-privesc-check'
+mkdir windows-privesc-check
+cd windows-privesc-check
 wget https://raw.githubusercontent.com/1N3/PrivEsc/master/windows/windows-privesc-check/windows-privesc-check.py
 wget https://github.com/1N3/PrivEsc/raw/master/windows/windows-privesc-check/windows-privesc-check.exe
 
