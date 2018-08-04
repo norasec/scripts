@@ -117,6 +117,6 @@ git clone https://github.com/NetSPI/PowerUpSQL
 git clone https://github.com/PowerShellMafia/PowerSCCM
 
 # HostRecon - Fast host and ad recon
-https://github.com/dafthack/HostRecon
+git clone https://github.com/dafthack/HostRecon
 
 cd ..
