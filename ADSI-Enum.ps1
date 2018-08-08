@@ -187,6 +187,16 @@ function ADSI-Enum-AD
     Write-Output "`n[+] All account locked"
     $s.filter = "(&(objectCategory=Person)(objectClass=User)(lockoutTime>=1))"
     $s.FindAll() | fl * >> $fileps1
+    
+    #laps
+    Write-Output "`n[+] LAPS expire"
+    $s.filter = "(ms-Mcs-AdmPwdExpirationTime=*)"
+    $s.FindAll() | fl * >> $fileps1
+    
+    Write-Output "`n[+] LAPS password, could require hight priv"
+    $s.filter = "(ms-Mcs-AdmPwd=*)"
+    $s.FindAll() | fl * >> $fileps1
+    
 }
 
 # Forest, Domains, Forest Trust, Domain Trust Func
