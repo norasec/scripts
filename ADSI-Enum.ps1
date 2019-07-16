@@ -123,24 +123,24 @@ function ADSI-Enum-AD
 
     Write-Output "`n[+] All Objects Users contains adm or test" >> $fileps1
     $s.filter = "(&(objectCategory=user)(|(cn=*test*)(cn=*adm*)))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All users with Password Never Expires set or not password required" >> $fileps1
     # 65536 password never expires + 32 password not required
     $s.filter = "(&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.804:=65568))" 
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All users never expired password and are enables" >> $fileps1
     $s.filter = "(&(objectCategory=person)(objectClass=user)(&(userAccountControl:1.2.840.113556.1.4.804:=65536)(!userAccountControl:1.2.840.113556.1.4.803:=2)(!lockoutTime>=1)))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All users not required to have a password and are enables" >> $fileps1
     $s.filter = "(&(objectCategory=person)(objectClass=user)(&(userAccountControl:1.2.840.113556.1.4.804:=32)(!userAccountControl:1.2.840.113556.1.4.803:=2)(!lockoutTime>=1)))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All objects with service principal name" >> $fileps1
     $s.filter = "(servicePrincipalName=*)"
-    $s.FindAll() | fl *  >> $fileps1
+    $s.FindAll().properties | fl *  >> $fileps1
 
     Write-Output "`n[+] All domain local groups" >> $fileps1
     $s.filter = "(groupType:1.2.840.113556.1.4.803:=4)"
@@ -173,7 +173,7 @@ function ADSI-Enum-AD
 
     Write-Output "`n[+] All users with mail" >> $fileps1
     $s.filter = "(&(objectClass=user)(email=*))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All users without mail" >> $fileps1
     $s.filter = "(&(objectClass=user)!(email=*))"
@@ -199,12 +199,12 @@ function ADSI-Enum-AD
 	#kerberoast
 	Write-Output "`n[+] SPNs for Kerberoast" >> $fileps1
     $s.filter = "(&(samAccountType=805306368)(servicePrincipalName=*))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 	
 	#asproast
 	Write-Output "`n[+] ASPRoast" >> $fileps1
     $s.filter = "(&(samAccountType=805306368)(userAccountControl:1.2.840.113556.1.4.803:=4194304))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
     
 }
 
