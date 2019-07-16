@@ -144,20 +144,20 @@ function ADSI-Enum-AD
 
     Write-Output "`n[+] All domain local groups" >> $fileps1
     $s.filter = "(groupType:1.2.840.113556.1.4.803:=4)"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All servers" >> $fileps1
     $s.filter = "(&(objectCategory=computer)(operatingSystem=*server*))" 
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     # nltest /dclist:<domain>
     Write-Output "`n[+] All Domain Controllers" >> $fileps1
     $s.filter = "(&(objectCategory=computer)(userAccountControl:1.2.840.113556.1.4.803:=8192))"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All Exchange servers in the Configuration container" >> $fileps1
     $s.filter = "(objectCategory=msExchExchangeServer)"
-    $s.FindAll() | fl * >> $fileps1
+    $s.FindAll().properties | fl * >> $fileps1
 
     Write-Output "`n[+] All trusts established with a domain" >> $fileps1
     $s.filter = "(objectClass=trustedDomain)"
