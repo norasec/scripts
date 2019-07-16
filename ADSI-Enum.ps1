@@ -419,3 +419,4 @@ Set-Alias Invoke-ADSI-Searcher ADSI-Searcher
 # Get-ADSI-Local full
 # Get-ADSI-Enum-AD $adsi_obj
 # Get-ADSI-Enum-AD-Forest-Domain $domain full
+# Invoke-ADSI-Searcher $adsi_obj
